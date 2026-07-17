@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="680" viewBox="0 0 1100 680" role="img" aria-labelledby="title desc">
+  <title id="title">基于ESP32的智能化妆品收纳与环境管理系统：源码推导的接口边界图</title>
+  <desc id="desc">不是原理图、PCB或实测接线。所有负载、供电、电平和共地必须真机复核。</desc>
+  <style>text{font-family:Arial,'Noto Sans SC',sans-serif;fill:#202124}.box{fill:#fff8f2;stroke:#b95d20;stroke-width:2}.warn{fill:#fff1f0;stroke:#b3261e;stroke-width:2}.line{stroke:#6b7280;stroke-width:2}.note{font-size:16px}.small{font-size:13px;fill:#5f6368}.head{font-size:25px;font-weight:bold}</style>
+  <rect width="1100" height="680" fill="#fffdf9"/>
+  <text x="42" y="45" class="head">源码推导的接口边界图（非实测接线 / 非原理图）</text>
+  <rect x="405" y="210" width="290" height="240" rx="16" class="box"/>
+  <text x="475" y="255" class="head">ESP32</text><text x="440" y="285" class="note">公开默认：不连 Wi‑Fi、不启 HTTP</text><text x="440" y="312" class="note">不执行实体动作</text><text x="440" y="342" class="small">GPIO 与极性来自源码，需实物核对</text>
+  <rect x="40" y="100" width="270" height="86" rx="12" class="box"/><text x="60" y="132" class="note">DHT11 · GPIO4</text><text x="60" y="158" class="small">温湿度；失败时为 unavailable</text>
+  <rect x="40" y="220" width="270" height="86" rx="12" class="box"/><text x="60" y="252" class="note">UV模块 · GPIO34</text><text x="60" y="278" class="small">未校准模块输出估算</text>
+  <rect x="40" y="340" width="270" height="86" rx="12" class="box"/><text x="60" y="372" class="note">PIR · GPIO5</text><text x="60" y="398" class="small">真实触发与电平待复核</text>
+  <rect x="40" y="460" width="270" height="100" rx="12" class="warn"/><text x="60" y="492" class="note">RC522 · SPI 18/19/23</text><text x="60" y="518" class="small">SS GPIO2 · RST GPIO15</text><text x="60" y="542" class="small">启动脚与 UID 安全边界待复核</text>
+  <rect x="790" y="85" width="270" height="82" rx="12" class="box"/><text x="810" y="116" class="note">OLED · I2C 21/22</text><text x="810" y="142" class="small">地址/电压待实物核对</text>
+  <rect x="790" y="195" width="270" height="82" rx="12" class="warn"/><text x="810" y="226" class="note">WS2812B · GPIO27</text><text x="810" y="252" class="small">低压外供/电平/共地待核对</text>
+  <rect x="790" y="305" width="270" height="82" rx="12" class="warn"/><text x="810" y="336" class="note">风扇驱动 · GPIO26/33</text><text x="810" y="362" class="small">不得由ESP32直接供电</text>
+  <rect x="790" y="415" width="270" height="82" rx="12" class="warn"/><text x="810" y="446" class="note">加湿器驱动 · GPIO25</text><text x="810" y="472" class="small">不得由ESP32直接供电</text>
+  <rect x="790" y="525" width="270" height="82" rx="12" class="warn"/><text x="810" y="556" class="note">舵机 · GPIO14</text><text x="810" y="582" class="small">无位置反馈，不是门锁证明</text>
+  <path d="M310 143H405M310 263H405M310 383H405M310 510H405M695 260H790M695 345H790M695 455H790M695 565H790M695 126H790" class="line"/>
+  <text x="42" y="635" class="small">红框负载必须有合规低压独立电源、适当驱动/保护和经确认的公共地；本图不能替代电气设计审查。</text>
+</svg>

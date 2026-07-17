@@ -1,0 +1,64 @@
+# Firmware and IDE state
+.pio/
+.vscode/
+.idea/
+.vs/
+*.iml
+*.code-workspace
+
+# Local credentials and device/network state
+.env
+.env.*
+!*.example
+firmware/src/config.local.h
+firmware/src/wifi_credentials.h
+firmware/src/credentials.h
+firmware/src/secrets.h
+# Mobile service credentials and user-specific IDE state
+mobile/smart_cabinet_app/android/app/google-services.json
+mobile/smart_cabinet_app/ios/Runner/GoogleService-Info.plist
+*.xcuserstate
+
+# Firmware build and release artifacts
+*.o
+*.a
+*.elf
+*.bin
+*.map
+*.hex
+release/
+*.apk
+*.aab
+
+# Flutter/Dart generated and local state
+mobile/smart_cabinet_app/.dart_tool/
+mobile/smart_cabinet_app/.flutter-plugins
+mobile/smart_cabinet_app/.flutter-plugins-dependencies
+mobile/smart_cabinet_app/.pub-cache/
+mobile/smart_cabinet_app/.pub/
+mobile/smart_cabinet_app/build/
+mobile/smart_cabinet_app/coverage/
+mobile/smart_cabinet_app/android/.gradle/
+mobile/smart_cabinet_app/android/app/build/
+mobile/smart_cabinet_app/android/local.properties
+mobile/smart_cabinet_app/.idea/
+mobile/smart_cabinet_app/.metadata
+
+# OS and temporary files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+__pycache__/
+*.pyc
+
+# Flutter platform-generated state not meant for source control
+mobile/smart_cabinet_app/android/.kotlin/
+mobile/smart_cabinet_app/ios/Flutter/ephemeral/
+mobile/smart_cabinet_app/ios/Flutter/Generated.xcconfig
+mobile/smart_cabinet_app/ios/Flutter/flutter_export_environment.sh
+mobile/smart_cabinet_app/linux/flutter/ephemeral/
+mobile/smart_cabinet_app/macos/Flutter/ephemeral/
+mobile/smart_cabinet_app/windows/flutter/ephemeral/
+mobile/smart_cabinet_app/.swiftpm/
+mobile/smart_cabinet_app/.packages

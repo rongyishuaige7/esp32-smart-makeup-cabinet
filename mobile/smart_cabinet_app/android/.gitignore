@@ -1,0 +1,12 @@
+/.gradle
+/captures/
+/local.properties
+# Keep the Flutter source build entrypoints and registrant tracked. They are
+# required by a clean checkout; only local/build state above remains ignored.
+.cxx/
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/to/reference-keystore
+key.properties
+**/*.keystore
+**/*.jks
