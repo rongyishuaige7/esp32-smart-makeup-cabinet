@@ -2,22 +2,22 @@
 
 ## 当前记录
 
+首发源码提交 [`4746c090eb2fc358aa61e02df2c7f55effba40f3`](https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/commit/4746c090eb2fc358aa61e02df2c7f55effba40f3) 的 [GitHub Actions Validate](https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/actions/runs/29608194135) 已于 2026-07-18（Asia/Shanghai）完成并成功。下表的“通过”只表示该提交的静态检查与构建；不表示真机、网络、传感器、实体输出或机械位置。
+
 | 检查项 | 状态 | 证据边界 |
 | :-- | :-- | :-- |
-| 公开范围扫描 | 待本机执行 | 通过只表示扫描规则覆盖到的候选文件未命中 |
-| 仓库资产检查 | 待本机执行 | 通过只表示必需文件、结构与静态声明存在 |
-| Python 源码契约 | 待本机执行 | 通过只表示受检源码文字/结构符合约束 |
-| ESP32 PlatformIO 默认、双 opt-in 与仅执行器宏仅编译覆盖 | 待本机执行 | 通过不等于烧录、外设、供电、Wi-Fi、实体输出或真实运行 |
-| Flutter format/test/analyze/debug APK | 待本机执行 | 通过不等于 Android/iOS 真机、网络或端到端验证；debug/profile 为开发期本地 HTTP 演示保留网络与 cleartext 权限，不能作为普通 release 网络策略或真机联调的验证 |
+| 公开范围扫描 | 通过（首发 exact-SHA CI） | 通过只表示扫描规则覆盖到的公开文件未命中 |
+| 仓库资产检查 | 通过（首发 exact-SHA CI） | 通过只表示必需文件、结构与静态声明存在 |
+| Python 源码契约 | 通过（首发 exact-SHA CI） | 通过只表示受检源码文字/结构符合约束 |
+| ESP32 PlatformIO 默认、双 opt-in 与仅执行器宏仅编译覆盖 | 通过（首发 exact-SHA CI） | 通过不等于烧录、外设、供电、Wi-Fi、实体输出或真实运行 |
+| Flutter format/test/analyze/debug APK | 通过（首发 exact-SHA CI） | 通过不等于 Android/iOS 真机、网络或端到端验证；debug/profile 为开发期本地 HTTP 演示保留网络与 cleartext 权限，不能作为普通 release 网络策略或真机联调的验证 |
 | 当前 commit 真机复测 | **未执行** | 没有日期化、可回读的烧录/接线/测试证据 |
 
-运行以下命令后，将实际日期、exact Git commit（创建仓库后）、命令摘要、PASS/FAIL/BLOCKED 和失败原因如实写入本文件：
+后续重新运行以下命令时，应在本文件追加实际日期、被验证的 exact Git commit、命令摘要、PASS/FAIL/BLOCKED 与失败原因；不得把脚本存在、历史运行或 CI 配置泛化为当前真机证据。
 
 ```bash
 bash scripts/verify.sh
 ```
-
-不要把“脚本存在”“曾经运行”“CI 配置存在”写成通过证据。
 
 ## 当前 commit 真机复测（尚未执行）
 

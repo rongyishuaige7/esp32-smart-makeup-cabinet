@@ -3,12 +3,12 @@
 ## 来源边界
 
 - 原始来源：桌面中的 `smart_makeup_cabinet` 原工程；在本次公开整理中保持只读，不初始化 Git、不修改、不提交、不推送。
-- 公开候选：从原工程隔离整理的 `esp32-smart-makeup-cabinet` 目录，用于后续公开仓审查。
+- 公开仓：从原工程隔离整理并已公开的 `esp32-smart-makeup-cabinet` 目录。
 - 原工程不是可用 Git 历史来源；当前文档不把桌面目录、旧文件时间或原始成品称为已发布版本、真机证据或公开构建来源。
 
 ## 净化原则
 
-公开候选只保留理解、构建和审查教学源码所需的文件。以下材料不得纳入公开仓：
+公开仓只保留理解、构建和审查教学源码所需的文件。以下材料不得纳入公开仓：
 
 - Wi-Fi SSID、密码、Token、私网 IP/MAC、位置、个人数据、真实日志、截图 EXIF/GPS；
 - `firmware/src/config.local.h`、`wifi_credentials.h`、`credentials.h`、`secrets.h`、`.env*`、`android/local.properties`；
@@ -20,9 +20,9 @@
 
 ## 来源清点与复算边界
 
-[`source-allowlist.txt`](source-allowlist.txt) 是对原工程可安全复查的相对文件清单；`scripts/source_manifest.py` 只读取该 allowlist，**不读取或哈希可能包含凭据/本机状态**的 `src/config.h`、`src/config.local.h`、`src/wifi_credentials.h` 和 `smart_cabinet_app/android/local.properties`。公开候选新增的空值示例 `firmware/src/wifi_credentials.example.h` 是发布净化资产，不在原工程 allowlist 中。
+[`source-allowlist.txt`](source-allowlist.txt) 是对原工程可安全复查的相对文件清单；`scripts/source_manifest.py` 只读取该 allowlist，**不读取或哈希可能包含凭据/本机状态**的 `src/config.h`、`src/config.local.h`、`src/wifi_credentials.h` 和 `smart_cabinet_app/android/local.properties`。公开仓新增的空值示例 `firmware/src/wifi_credentials.example.h` 是发布净化资产，不在原工程 allowlist 中。
 
-首次来源核对已只读计算原工程 allowlist 的 SHA-256：`84377e94f2bcfa14f368ccc4354fa2c8f01ff17bb0651342f79d46aac7262b4e`（63 个允许文件）。该摘要只用于证明当时审阅的非敏感源文件集合；它不覆盖被排除文件，也不等同于公开候选、构建、许可证或真机证据。
+首次来源核对已只读计算原工程 allowlist 的 SHA-256：`84377e94f2bcfa14f368ccc4354fa2c8f01ff17bb0651342f79d46aac7262b4e`（63 个允许文件）。该摘要只用于证明当时审阅的非敏感源文件集合；它不覆盖被排除文件，也不等同于公开仓、构建、许可证或真机证据。
 
 清单与 manifest 的用途只是审计**选择了哪些安全文件**，不是公开仓构建依赖、许可证证明、真实运行证据或对原目录的全量扫描。执行脚本前应人工确认原始路径、访问授权与 allowlist；不要为了生成 hash 读取被排除的配置。
 

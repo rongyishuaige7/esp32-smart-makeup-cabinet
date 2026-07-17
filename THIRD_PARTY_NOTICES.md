@@ -38,4 +38,4 @@ Flutter、Dart、Android Gradle Plugin、Gradle、Kotlin、iOS/macOS/Linux/Windo
 
 ## 本项目许可
 
-Rongyi 自有的候选源码、文档、BOM 与接线边界图按 [MIT License](LICENSE) 发布。第三方名称、商标和许可证仍归各自权利人所有；MIT 不覆盖第三方组件或其二进制产物。
+Rongyi 自有的公开源码、文档、BOM 与接线边界图按 [MIT License](LICENSE) 发布。第三方名称、商标和许可证仍归各自权利人所有；MIT 不覆盖第三方组件或其二进制产物。

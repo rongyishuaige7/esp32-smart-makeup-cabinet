@@ -1,6 +1,6 @@
 # GitHub Description 与 Topics
 
-> 本文件定义仓库页面应使用的元数据。Description 与 Topics 必须在 GitHub 仓库实际创建后设置并回读确认；它们不代表 CI、真机或产品成熟度。
+> 本文件记录已设置并回读确认的仓库页面元数据；它们不代表 CI、真机或产品成熟度。
 
 ## Description
 
@@ -39,4 +39,4 @@ uv-safety
 production-ready
 ```
 
-发布后在 GitHub 仓库页面设置 Description 与 Topics，并回读确认。不应使用“智能门锁”“安全控制”“化妆品检测”“健康监测”“自动化安全”或“production ready”等暗示性文案。
+GitHub 仓库页面已设置并回读确认以上 Description 与 Topics。后续修改时仍不得使用“智能门锁”“安全控制”“化妆品检测”“健康监测”“自动化安全”或“production ready”等暗示性文案。
