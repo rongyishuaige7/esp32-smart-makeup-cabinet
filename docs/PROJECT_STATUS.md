@@ -21,8 +21,8 @@
 
 即使全部通过，结果也只代表静态公开检查和构建；不代表烧录、传感器、Wi-Fi、HTTP、Android/iOS、执行器、RFID、机械机构或真实环境结果。
 
-## Historical media and EDA added on 2026-07-18
+## 2026-07-18 新增的历史素材与 EDA
 
-sanitized historical photo(s), sanitized historical screenshot(s). See [MEDIA_EVIDENCE](MEDIA_EVIDENCE.md) for dates, sanitization, omissions, and evidence limits.
+已脱敏的历史照片和历史截图。日期、脱敏处理、未公开材料和证据边界见 [MEDIA_EVIDENCE](MEDIA_EVIDENCE.md)。
 
-This publication update adds historical evidence only. Current hardware re-test not run.
+本次发布仅新增历史证据。当前未进行真机复测。
