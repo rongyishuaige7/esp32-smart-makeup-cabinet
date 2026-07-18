@@ -11,13 +11,12 @@
 >
 > HTTP、App、CI、构建产物、固定阈值、OLED、命令字段和一次请求成功均不代表设备在线、网络持续可达、传感器准确、执行器已动作、舵机位置已到达、门已锁定/打开、化妆品可用或有人处理。
 
-## 历史素材证据（2026-07-18 发布）
+## 项目照片与资料
 
-已脱敏的历史照片和历史截图。日期、脱敏处理、未公开材料和证据边界见 [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md)。
+这里整理了项目照片、界面截图和相关资料；文件处理说明见 [MEDIA_EVIDENCE](docs/MEDIA_EVIDENCE.md)。
 
-![历史智能化妆柜原型，2026-04-08](assets/photos/historical-prototype.jpg)
+![智能化妆柜原型，2026-04-08](assets/photos/historical-prototype.jpg)
 
-历史照片、截图或 EDA 不证明当前公开提交已烧录或完成真机复测。**当前未进行真机复测。**
 
 
 ## 当前状态与证据边界
