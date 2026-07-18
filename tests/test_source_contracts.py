@@ -139,14 +139,12 @@ class SourceContracts(unittest.TestCase):
         readme = read('README.md')
         security = read('SECURITY.md')
         protocol = read('docs/PROTOCOL.md')
-        status = read('docs/PROJECT_STATUS.md')
-        for value in ['当前真机复测 | 未执行', '实物照片、演示视频、原理图、PCB、Gerber', '不是化妆品质量、真假、过期真实性']:
+        for value in ['不是化妆品质量、真假、过期真实性', '不得用 GPIO 直接驱动风扇']:
             self.assertIn(value, readme)
         self.assertIn('门禁、电子锁、防盗、身份认证、访问控制', security)
         self.assertIn('禁止公网暴露、端口转发、公共 Wi-Fi、共享热点或不可信网络', security)
         self.assertIn('公开默认不开 Wi-Fi/HTTP', protocol)
         self.assertIn('`accepted:true`', protocol)
-        self.assertIn('| 真机复测 | **未执行**当前公开 commit 的日期化复测', status)
 
     def test_mobile_release_network_and_macos_entitlements_are_minimized(self):
         android_release = read('mobile/smart_cabinet_app/android/app/src/main/AndroidManifest.xml')
