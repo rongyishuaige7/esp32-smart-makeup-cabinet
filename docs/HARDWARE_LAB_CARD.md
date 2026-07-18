@@ -14,3 +14,5 @@
 - **验证边界：** CI 或本地构建仅表示源码门禁和构建，不表示真实硬件、网络、执行器或机械位置。
 
 首发索引已记录实际仓库 URL、首发 commit 和 Actions 成功结果。后续更新索引前仍须核对 LICENSE/README/SECURITY/THIRD_PARTY、Actions exact SHA、Description/Topics，以及索引标题为中文且不使用“智能门锁”“安全系统”“生产可用”等误导表述。
+
+- **历史媒体 / EDA：** 已加入经脱敏的历史衍生材料；范围和版本差异见 [`MEDIA_EVIDENCE.md`](MEDIA_EVIDENCE.md)。它们不证明当前公开提交已完成真机复测。
