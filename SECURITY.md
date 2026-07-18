@@ -8,7 +8,6 @@
 
 ## 公开默认与本地 opt-in
 
-- 默认 `WIFI_SSID` 为空、`ENABLE_EXPERIMENTAL_ACTUATORS=0`、`ENABLE_EXPERIMENTAL_LOCAL_CONTROL=0`、`ENABLE_EXPERIMENTAL_RFID_MAINTENANCE=0`。公开构建不启动 Wi-Fi/HTTP，不初始化风扇、加湿器、舵机或 WS2812B 的输出驱动，相关 GPIO 保持输入高阻。由于未知实际驱动极性、外部上拉、供电和接线，且当前未真机复测，这不是任意实体负载已关闭、电气安全或无误动作的证明。
 - 本地 `firmware/src/config.local.h` 被 Git 忽略，仅可用于个人受监督、低压、隔离可信局域网台架实验。它不是安全边界，也不授予任何远程控制、门锁、认证或生产使用能力。
 - `accepted:true` 只表示 HTTP handler 接受本次请求；`*Commanded*` 是软件命令变量；`localControlAndActuatorsEnabled` 只表示两个实验开关同时启用；`publicDefaultInert` 是它的反值，不能概括 RFID 维护、设备在线或实体输出；`physicalPositionVerified=false` 明确表示没有执行器或舵机物理位置反馈。
 

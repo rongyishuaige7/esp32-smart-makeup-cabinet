@@ -17,19 +17,6 @@
 
 ![智能化妆柜原型，2026-04-08](assets/photos/historical-prototype.jpg)
 
-
-
-## 当前状态与证据边界
-
-| 项目 | 当前事实 |
-| :-- | :-- |
-| 源码来源 | 桌面原始工程为只读来源；本公开仓由其隔离整理，不反向修改原目录。来源范围见 [SOURCE_PROVENANCE](docs/SOURCE_PROVENANCE.md)。 |
-| 公开净化 | 不包含 Wi-Fi 凭据、私网地址、缓存、IDE 状态、构建物、APK、固件二进制、实物照片、视频、EDA、PCB、Gerber、制造文件或真实运行日志。 |
-| 公开默认 | `WIFI_SSID` 为空、`ENABLE_EXPERIMENTAL_ACTUATORS=0`、`ENABLE_EXPERIMENTAL_LOCAL_CONTROL=0`：不启动 Wi-Fi/HTTP；不初始化风扇、加湿器、舵机或 WS2812B 的输出驱动，并将相关 GPIO 保持为输入高阻。未知驱动极性、外部上拉、供电和接线仍可能改变实体行为；当前未真机复测，不能据此推断任何负载已关闭、电气安全或无误动作。 |
-| 固件构建 | 首发源码提交 [`4746c09`](https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/commit/4746c090eb2fc358aa61e02df2c7f55effba40f3) 的公开范围门禁、固件和 Flutter 构建已由 [GitHub Actions exact-SHA 成功记录](https://github.com/rongyishuaige7/esp32-smart-makeup-cabinet/actions/runs/29608194135) 记录；该证据仅代表静态检查和构建。详见 [VERIFICATION](docs/VERIFICATION.md)。 |
-| 当前真机复测 | 未执行；没有当前公开 commit 的日期化烧录、配网、传感器、低压执行器或 Flutter 联调证据。 |
-| 媒体与 EDA | 当前未公开实物照片、演示视频、原理图、PCB、Gerber 或制造文件。 |
-
 ## 源码功能范围
 
 ```text

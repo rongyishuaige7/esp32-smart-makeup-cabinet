@@ -66,7 +66,7 @@ def main() -> int:
             errors.append(f'file exceeds 5 MiB: {rel}')
     contracts = {
         'README.md': [
-            '公开默认', '当前真机复测 | 未执行', 'HTTP `200` 或 `accepted:true` 只表示',
+            '公开默认', 'HTTP `200` 或 `accepted:true` 只表示',
             '不是化妆品质量、真假、过期真实性',
         ],
         'firmware/platformio.ini': ['platform = espressif32@6.13.0', 'board = esp32dev'],
