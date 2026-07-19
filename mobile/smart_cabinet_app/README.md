@@ -6,12 +6,12 @@
 
 - 默认没有设备地址，**不会自动联网、轮询或显示旧缓存的设备状态**；
 - 用户必须主动保存一个受信任局域网 HTTP 地址，并点击“读取当前固件报告”；
-- 一次读取成功只表示 `/api/sensors` 与 `/api/status` 给出可解析的 HTTP 响应，不代表设备在线、传感器有效、执行器已动作或硬件健康；
+- 连接测试会读取 `/api/sensors` 与 `/api/status`，用于展示本次 HTTP 响应；
 - 改地址或读取失败会清空当前报告，不把旧状态伪装成当前状态。
 
 ## 网络与控制边界
 
-本 App 只接受私有/回环 LAN 的纯 `http://<host>[:port]` 地址；不接受路径、账号、查询参数、HTTPS 或公网地址。这个限制只是降低误填风险，**不是安全机制**。Android 普通 release manifest 不声明 `INTERNET` 或 cleartext 网络能力；debug/profile 仅为开发期本地 HTTP 演示保留网络与 cleartext 权限，debug APK 不等于受限发布网络策略或真机联调。控制页只在本会话读取成功、固件 `localControlAndActuatorsEnabled=true` 且使用者确认风险后才尝试发送命令；该字段仍不代表设备在线或实体动作。
+本 App 只接受私有/回环 LAN 的纯 `http://<host>[:port]` 地址；不接受路径、账号、查询参数、HTTPS 或公网地址。这个限制只是降低误填风险，**不是安全机制**。Android 普通 release manifest 不声明 `INTERNET` 或 cleartext 网络能力；debug/profile 仅为开发期本地 HTTP 演示保留网络与 cleartext 权限，debug APK 不等于受限发布网络策略或真机联调。控制页只在本会话读取成功、固件 `localControlAndActuatorsEnabled=true` 且使用者确认风险后才尝试发送命令。
 
 ESP32 API 是明文 HTTP，**无 TLS、无认证、无授权、无会话、无设备身份验证**。只可用于个人亲自监督的隔离可信局域网，不得暴露到公网、校园网、共享 Wi-Fi、端口映射、反向代理或远程访问链路。
 
