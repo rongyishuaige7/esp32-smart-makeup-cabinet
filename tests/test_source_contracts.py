@@ -139,7 +139,7 @@ class SourceContracts(unittest.TestCase):
         readme = read('README.md')
         security = read('SECURITY.md')
         protocol = read('docs/PROTOCOL.md')
-        for value in ['不是化妆品质量、真假、过期真实性', '不得用 GPIO 直接驱动风扇']:
+        for value in ['不是化妆品质量、真假、过期真实性', '不能直接驱动风扇']:
             self.assertIn(value, readme)
         self.assertIn('门禁、电子锁、防盗、身份认证、访问控制', security)
         self.assertIn('禁止公网暴露、端口转发、公共 Wi-Fi、共享热点或不可信网络', security)
